@@ -54,9 +54,13 @@ bool askToPlayAgain()
 
 int main()
 {
-    PrintIntro();
-    PLAYGAME();
-    askToPlayAgain();
+    bool bPlayAgain = false; 
+    do 
+    {
+        PrintIntro();
+        PLAYGAME();
+        bPlayAgain = askToPlayAgain();
+    } while (bPlayAgain);
 
     return 0;
 }
