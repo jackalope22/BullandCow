@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include "bullcowgame.h"
 
 using namespace std;
 
@@ -31,10 +32,12 @@ string GetGuess()
 
 void PLAYGAME() 
 {
-    // sets the number chances the player gets to guess the answer
+    bullAndCowGame BCGame; // instantiate a new game
+    int MaxTries = BCGame.getMaxTries();
+    std::cout << MaxTries << std::endl;
 
-    const int NUMBER_OF_TURNS = 5;
-    for (int i = 1; i <=NUMBER_OF_TURNS; i++)
+    // sets the number chances the player gets to guess the answer
+    for (int i = 1; i <= MaxTries; i++)
     {
         GetGuess();
     }
